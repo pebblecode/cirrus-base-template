@@ -73,13 +73,13 @@
       
     </div>
     <!--end global-cookie-message-->
-
-    
-    <header style="background-color: #45C9DF; height: 50px;" role="banner" id="global-header" class="{% block header_class %}{% endblock %}">
+    <header role="banner" id="global-header" class="{% block header_class %}{% endblock %}" style="background-color: #45C9DF;">
       <div class="header-wrapper" style="background-color: #45C9DF;">
         <div class="header-global">
-          <h2 style="font-size: 20px; text-transform: uppercase; letter-spacing: .5px; color: white !important; padding: 5px 0 0 15px;"> {{ global_header_text|default('Project Cirrus') }}</h2>
-          {% block inside_header %}{% endblock %}  
+          <div class="header-logo">
+           <h2 style="font-size: 20px; text-transform: uppercase; letter-spacing: .5px; color: white !important; padding: 5px 0 0 15px;"> {{ global_header_text|default('Project Cirrus') }}</h2>
+          </div>
+          {% block inside_header %}{% endblock %}
         </div>
         {% block proposition_header %}{% endblock %}
       </div>
