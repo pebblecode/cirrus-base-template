@@ -1,12 +1,11 @@
 /* Global footer */
 
 #footer {
-  background-color: $footer-background;
-  border-top: 1px solid $footer-border-top;
+  background-color: $ink;
 
   .footer-wrapper {
     @extend %site-width-container;
-    background-color: $footer-background;
+    background-color: $ink;
     padding-top: 20px;
 
     @include media(tablet) {
@@ -15,10 +14,10 @@
   }
 
   a {
-    color: $footer-link;
+    color: $paper;
 
     &:hover {
-      color: $footer-link-hover;
+      color: $inoket-blue;
     }
   }
 

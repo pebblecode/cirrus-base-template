@@ -3,15 +3,25 @@
 @import '_measurements';
 
 #global-header {
-  background-color: $black;
+  background-color: $inoket-blue;
   width: 100%;
 
+  .logo {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: .5px;
+    color: white !important;
+    padding: 5px 0 0 15px;
+    margin-top: 9%;
+  }
+
   .header-wrapper {
-    background-color: $black;
+    background-color: $inoket-blue;
     max-width: 990px;
     margin: 0 auto;
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding-top:2px;
+    padding-bottom: 15px;
     @extend %contain-floats;
     @include media(tablet){
       padding-left: $gutter-half;
@@ -159,6 +169,7 @@
     }
     #proposition-menu {
       margin-top: 5px;
+      float:right;
 
       // Some headers (Whitehall) don't have a propsition name, offset as if they did.
       &.no-proposition-name {
@@ -169,13 +180,22 @@
       }
     }
     #proposition-link,
+    #login-links,
     #proposition-links {
       clear: both;
       @extend %contain-floats;
       margin: 2px 0 0 0;
       padding: 0;
 
-      .js-enabled & {
+        &.login {
+          float: right;
+        }
+
+        &.navigation {
+          margin-top: 20px;
+          float: right;
+        }
+        .js-enabled & {
         display: none;
         @include media(desktop){
           display: block;
@@ -225,7 +245,15 @@
       }
     }
 
-    #proposition-link {
+    #login-links {
+      li a {
+        font-size: 14px;
+      }
+    }
+
+
+    #proposition-link,
+    #login-links {
       float: right;
       line-height: 22px;
       .js-enabled & {
@@ -235,6 +263,12 @@
         float:none;
       }
     }
+
+    #proposition-link li a {
+      margin-top: 50px;
+      color:red;
+    }
+
   }
 }
 
@@ -242,8 +276,6 @@
 
 #global-header-bar {
   @extend %site-width-container;
-  height: 10px;
-  background-color: $govuk-blue;
   @include ie-lte(8) {
     font-size: 0;
   }
