@@ -86,7 +86,7 @@
     style = document.createElement('style');
     style.setAttribute('type', 'text/css');
     style.setAttribute('media', 'print');
-    style.innerHTML = '@font-face { font-family: nta !important; src: local("Arial") !important; }';
+    style.innerHTML = '@font-face { font-family: nta !important; src: local("Helvetica") !important; }';
     document.getElementsByTagName('head')[0].appendChild(style);
   }
 

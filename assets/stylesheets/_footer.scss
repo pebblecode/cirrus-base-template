@@ -6,11 +6,7 @@
   .footer-wrapper {
     @extend %site-width-container;
     background-color: $ink;
-    padding-top: 20px;
 
-    @include media(tablet) {
-      padding-top: 60px;
-    }
   }
 
   a {
